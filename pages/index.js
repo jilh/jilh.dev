@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { IoMenuOutline } from 'react-icons/io5'
+import Navbar from '../components/Navbar'
+
+import { IoMenuOutline, IoLogoAngular, IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io5'
 import styles from '../styles/Home.module.css'
+import InfoSection from '../components/InfoSection'
+import ProjectSection from '../components/ProjectSection'
 
 export default function Home() {
   return (
@@ -17,80 +21,10 @@ export default function Home() {
       <main>
         <div className={styles.pageContainer}>
           <div className={styles.container}>
-            <nav className={styles.navbar}>
-              <Image src="/logo.png" alt="Jilh Logo" width={45} height={45} />
-              <div className={styles.menu}>
-                <div className={styles.links}>
-                  <Link href="#"><a>Home</a></Link>
-                  <Link href="#"><a>Projects</a></Link>
-                  <Link href="#"><a>Talks</a></Link>
-                  <Link href="#"><a>Resume</a></Link>
-                </div>
-                <IoMenuOutline size={40} />
-              </div>
-            </nav>
+            <Navbar />
             <div className={styles.pageContent}>
-              <div className={styles.infoSection}>
-                <h1 className={styles.header}>Hello, I'm <br />Stephen Afolayan.</h1>
-                <p className={styles.paragraph}>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p className={styles.paragraph}>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-              </div>
-              <div className={styles.projectSection}>
-                <span>James</span>
-                <h1>Hello, I'm Stephen Afolayan.</h1>
-                <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-                <h1>Hello, I'm Stephen Afolayan.</h1>
-                <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-                <h1>Hello, I'm Stephen Afolayan.</h1>
-                <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-                <h1>Hello, I'm Stephen Afolayan.</h1>
-                <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-                <h1>Hello, I'm Stephen Afolayan.</h1>
-                <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-                <h1>Hello, I'm Stephen Afolayan.</h1>
-                <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-                <h1>Hello, I'm Stephen Afolayan.</h1>
-                <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
-                  I create amazing user facing experience with modern technologies to solve business needs.
-                </p>
-                <p>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
-                  I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
-                </p>
-              </div>
+              <InfoSection />
+              <ProjectSection />
             </div>
           </div>
         </div>

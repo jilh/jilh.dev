@@ -1,0 +1,47 @@
+/* .infoSection{
+ 
+} */
+
+.header{
+  font-family: 'TT Norms Black';
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+.paragraph{
+  font-size: 0.95rem;
+  width: 70%;
+  font-family: 'TT Norms Light';
+  color: rgba(255, 255, 255, 0.5);
+}
+.subHeading{
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.9rem;
+}
+.tools{
+    margin-top: 10vh;
+}
+.toolsIconWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.toolsIcon{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.connect{
+    margin-top: 5vh;
+}
+.connectIconWrapper{
+    padding-top: 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 70%;
+}
+.link{
+    color: rgba(255, 255, 255, 0.5);
+}

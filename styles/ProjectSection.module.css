@@ -1,0 +1,12 @@
+.projectSection{
+    overflow-y: auto;
+    height: 80vh;
+    scrollbar-width: none; 
+}
+/* .projectSection:hover{
+    overflow-y: auto;
+} */
+.projectSection::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+  
