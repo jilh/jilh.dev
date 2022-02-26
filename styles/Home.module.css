@@ -25,7 +25,6 @@
 
 .pageContainer{
   height: 100vh;
-  background-color: green;
 }
 
 .pageContent{
@@ -36,6 +35,21 @@
 .infoSection{
 
 }
+
+.header{
+  font-family: 'TT Norms Black';
+  font-size: 2rem;
+}
+.paragraph{
+  font-size: 0.95rem;
+  width: 70%;
+}
+
+
+
+
+
+
 .projectSection{
   overflow-y: auto;
   height: 85vh;

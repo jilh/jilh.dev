@@ -4,32 +4,32 @@
 }
 
 @font-face {
-    font-family: 'TT Norms';
+    font-family: 'TT Norms Black';
     src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Black.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'TT Norms';
+  font-family: 'TT Norms BlackItalic';
   src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-BlackItalic.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'TT Norms';
+  font-family: 'TT Norms Bold';
   src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Bold.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'TT Norms';
+  font-family: 'TT Norms BoldItalic';
   src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-BoldItalic.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'TT Norms';
+  font-family: 'TT Norms Italic';
   src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Italic.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'TT Norms';
+  font-family: 'TT Norms Light';
   src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Light.otf) format('opentype');
 }
 
