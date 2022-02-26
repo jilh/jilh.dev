@@ -1,8 +1,43 @@
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Black.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-BlackItalic.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-BoldItalic.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Italic.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TT Norms';
+  src: local('TT Norms'), url(../public/fonts/TTNorms/TTNorms-Light.otf) format('opentype');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, TT Norms, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
