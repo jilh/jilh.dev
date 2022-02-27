@@ -1,0 +1,46 @@
+.featuredProjects{
+    display: flex;
+    flex-direction: column;
+}
+.subHeading{
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+.featuredProjectCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020;
+    padding: 25px 50px;
+    margin-bottom: 10px;
+}
+.featuredProjectCard:hover .cardTitle{
+    background-color: green;
+}
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+}
+.cardTitleGroup{
+    display: flex;
+    flex-direction: column;
+}
+.cardTitle{
+    color: #fff;
+}
+.cardSubTitle{
+    color: #fff;
+}
+.cardDetails{
+    width: 80%;
+    color: #fff;
+}
+.cardLinks{
+    color: #fff;
+}
+.cardImage{
+    width: 100%;
+    height: auto;
+}

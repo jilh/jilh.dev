@@ -1,7 +1,9 @@
 import styles from '../styles/ProjectSection.module.css'
+import FeaturedProjects from './FeaturedProjects'
 const ProjectSection = () => {
     return(
         <div className={styles.projectSection}>
+            <FeaturedProjects />
             <h1>Hello, I'm Stephen Afolayan.</h1>
             <p>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
                 I create amazing user facing experience with modern technologies to solve business needs.
