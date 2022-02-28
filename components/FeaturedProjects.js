@@ -14,7 +14,9 @@ const FeaturedProjects = () => {
                     <p className={styles.cardDetails}>A food ordering app that brings conveniency to customers</p>
                     <p className={styles.cardLinks}>Check Online</p>
                 </div>
-                <Image src="/logo.png" width={200} height={200} className={styles.cardImage} />
+                <div className='image-container'>
+                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} />
+                </div>
             </div>
 
             <div className={styles.featuredProjectCard}>
@@ -26,7 +28,9 @@ const FeaturedProjects = () => {
                     <p className={styles.cardDetails}>A food ordering app that brings conveniency to customers</p>
                     <p className={styles.cardLinks}>Check Online</p>
                 </div>
-                <Image src="/logo.png" width={200} height={200} className={styles.cardImage} />
+                <div className='image-container'>
+                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} />
+                </div>
             </div>
         </div>
     )

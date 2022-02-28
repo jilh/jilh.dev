@@ -29,18 +29,31 @@
 }
 .cardTitle{
     color: #fff;
+    font-size: 0.9em;
+    font-family: 'TT Norms Regular';
+    margin-bottom: 5px;
 }
 .cardSubTitle{
-    color: #fff;
+    color: #ffffff;
+    font-size: 0.6em;
+    font-family: 'TT Norms Light';
 }
 .cardDetails{
-    width: 80%;
-    color: #fff;
+    width: 90%;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
 }
 .cardLinks{
-    color: #fff;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 20px;
+}
+.image-container{
+    width: 100%;
+    position: unset !important;
 }
 .cardImage{
-    width: 100%;
-    height: auto;
+    object-fit: cover;
+    width: 100% !important;
+    height: unset !important;
+    opacity: 0.1;
 }
