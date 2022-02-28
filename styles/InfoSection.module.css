@@ -1,6 +1,6 @@
-/* .infoSection{
- 
-} */
+.infoSection{
+ flex-basis: 50%;
+}
 
 .header{
   font-family: 'TT Norms Black';

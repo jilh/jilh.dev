@@ -1,13 +1,20 @@
-.featuredProjects{
+.otherProjects{
     display: flex;
     flex-direction: column;
+    margin-top: 5vh;
 }
 .subHeading{
     color: rgba(255, 255, 255, 1);
     font-size: 0.9rem;
     margin-bottom: 20px;
 }
-.featuredProjectCard{
+.otherProjectWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.otherProjectCard{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,8 +22,9 @@
     background-color: #1b1b1d;
     padding: 25px 50px;
     margin-bottom: 10px;
+    flex-basis: 48%;
 }
-.featuredProjectCard:hover .cardTitle{
+.otherProjectCard:hover .cardTitle{
     background-color: green;
 }
 .cardInfo{
@@ -39,7 +47,6 @@
     font-family: 'TT Norms Light';
 }
 .cardDetails{
-    width: 90%;
     color: rgba(255, 255, 255, 0.5);
     margin-top: 20px;
 }
@@ -48,14 +55,4 @@
     margin-top: 20px;
     font-family: 'TT Norms Light';
     font-size: 0.9em;
-}
-.image-container{
-    width: 100%;
-    position: unset !important;
-}
-.cardImage{
-    object-fit: cover;
-    width: 100% !important;
-    height: unset !important;
-    opacity: 0.1;
 }
