@@ -13,7 +13,7 @@
     /* align-items: center; */
     justify-content: space-between;
     background-color: #1b1b1d;
-    padding: 40px 40px;
+    padding: 1.5rem;
     margin-bottom: 10px;
 }
 .featuredProjectCard:hover .cardTitle{
@@ -45,7 +45,7 @@
 }
 .cardLinks{
     color: rgba(255, 255, 255, 0.4);
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-family: 'TT Norms Light';
     font-size: 0.9em;
 }
@@ -54,7 +54,7 @@
     position: unset !important;
 }
 .cardImage{
-    object-fit: cover;
+    object-fit: contain;
     width: 100% !important;
     height: unset !important;
     opacity: 0.1;
