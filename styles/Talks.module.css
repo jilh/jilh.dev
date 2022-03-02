@@ -1,4 +1,4 @@
-.otherProjects{
+.talks{
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
@@ -8,13 +8,13 @@
     font-size: 0.9rem;
     margin-bottom: 20px;
 }
-.otherProjectWrapper{
+.talksWrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.otherProjectCard{
+.talksCard{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -24,7 +24,7 @@
     margin-bottom: 10px;
     flex-basis: 48%;
 }
-.otherProjectCard:hover .cardTitle{
+.talksCard:hover .cardTitle{
     background-color: green;
 }
 .cardInfo{
@@ -36,23 +36,34 @@
     flex-direction: column;
 }
 .cardTitle{
-    color: #fff;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.9em;
     font-family: 'TT Norms Regular';
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 .cardSubTitle{
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.4);
     font-size: 0.6em;
     font-family: 'TT Norms Light';
+    line-height: 2.0em;
+}
+.image-container{
+    width: 100%;
+    position: unset !important;
+}
+.cardImage{
+    object-fit: contain;
+    width: 100% !important;
+    height: unset !important;
+    opacity: 0.1;
 }
 .cardDetails{
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 20px;
+    color: rgba(255, 255, 255, .5);
+    /* margin-top: 20px; */
 }
 .cardLinks{
     color: rgba(255, 255, 255, 0.4);
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-family: 'TT Norms Light';
     font-size: 0.9em;
 }
