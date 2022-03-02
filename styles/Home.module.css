@@ -6,6 +6,7 @@
 .pageContainer{
   height: 100vh;
   background-color: #151515;
+  /* background: radial-gradient(rgb(56, 55, 55), rgb(22, 22, 22)); */
 }
 
 .pageContent{
