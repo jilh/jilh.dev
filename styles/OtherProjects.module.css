@@ -56,3 +56,9 @@
     font-family: 'TT Norms Light';
     font-size: 0.9em;
 }
+
+@media screen and (max-width: 993px){
+    .otherProjectCard{
+        flex-basis: 100%;
+    }
+}

@@ -13,3 +13,12 @@
   flex-direction: row;
   padding-top: 5vh;
 }
+
+@media screen and (max-width: 993px){
+  .pageContainer{
+    height: 100%;
+  }
+  .pageContent{
+    flex-direction: column;
+  }
+}

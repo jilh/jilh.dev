@@ -67,3 +67,9 @@
     font-family: 'TT Norms Light';
     font-size: 0.9em;
 }
+
+@media screen and (max-width: 993px){
+    .talksCard{
+        flex-basis: 100%;
+    }
+}
