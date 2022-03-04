@@ -3,7 +3,7 @@ import styles from '../styles/Talks.module.css';
 
 const Talks = () => {
     return(
-        <div className={styles.talks}>
+        <div className={styles.talks} id="talks">
             <b className={styles.subHeading}>TALKS</b>
             <div className={styles.talksWrapper}>
                 <div className={styles.talksCard}>

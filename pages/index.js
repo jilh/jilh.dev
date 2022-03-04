@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
 
-      <main>
+      <main  id="home">
         <div className={styles.pageContainer}>
           <div className={styles.container}>
             <Navbar />

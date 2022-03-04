@@ -3,7 +3,7 @@ import styles from '../styles/OtherProjects.module.css';
 
 const OtherProjects = () => {
     return(
-        <div className={styles.otherProjects}>
+        <div className={styles.otherProjects} id="projects">
             <b className={styles.subHeading}>OTHER PROJECTS</b>
             <div className={styles.otherProjectWrapper}>
                 <div className={styles.otherProjectCard}>

@@ -9,9 +9,9 @@ const Navbar = () => {
             <Image src="/logo.png" alt="Jilh Logo" width={45} height={45} />
             <div className={styles.menu}>
             <div className={styles.links}>
-                <Link href="#"><a>Home</a></Link>
-                <Link href="#"><a>Projects</a></Link>
-                <Link href="#"><a>Talks</a></Link>
+                <Link href="#home"><a>Home</a></Link>
+                <Link href="#projects"><a>Projects</a></Link>
+                <Link href="#talks"><a>Talks</a></Link>
                 <Link href="#"><a>Resume</a></Link>
             </div>
             <IoMenuOutline size={40} />
