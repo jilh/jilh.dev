@@ -15,7 +15,7 @@ const FeaturedProjects = () => {
                     <p className={styles.cardLinks}>Check Online</p>
                 </div>
                 <div className='image-container'>
-                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} />
+                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} alt="Grachef Website" />
                 </div>
             </div>
 
@@ -29,7 +29,7 @@ const FeaturedProjects = () => {
                     <p className={styles.cardLinks}>Check Online</p>
                 </div>
                 <div className='image-container'>
-                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} />
+                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} alt="Grachef Website" />
                 </div>
             </div>
         </div>

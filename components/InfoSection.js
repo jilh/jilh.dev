@@ -16,11 +16,11 @@ import styles from '../styles/InfoSection.module.css'
 const InfoSection = () => {
     return(
         <div className={styles.infoSection}>
-            <h1 className={styles.header}>Hello, I'm <br />Stephen Afolayan.</h1>
-            <p className={styles.paragraph}>I'm a community organizer, frontend developer, and UI/UX design enthusiast.
+            <h1 className={styles.header}>Hello, I am <br />Stephen Afolayan.</h1>
+            <p className={styles.paragraph}>I am a community organizer, frontend developer, and UI/UX design enthusiast.
                 I create amazing user facing experience with modern technologies to solve business needs.
             </p>
-            <p className={styles.paragraph}>Whe I'm not found hitting the keyboard, speaking at events, or putting pixels in place,
+            <p className={styles.paragraph}>When I am not found hitting the keyboard, speaking at events, or putting pixels in place,
                 I must be somewhere trying to fill up a 4GB space of camera memory with mouth watering pictures.
             </p>
 
