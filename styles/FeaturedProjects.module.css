@@ -10,18 +10,18 @@
 .featuredProjectCard{
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
+    align-items: center;
     justify-content: space-between;
     background-color: #1b1b1d;
     padding: 1.5rem;
     margin-bottom: 10px;
 }
-.featuredProjectCard:hover .cardTitle{
-    background-color: green;
+.featuredProjectCard:hover .cardImage{
+    opacity: 1;
 }
 .cardInfo{
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
 }
 .cardTitleGroup{
     display: flex;
