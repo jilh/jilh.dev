@@ -13,7 +13,7 @@ const OtherProjects = () => {
                             <small className={styles.cardSubTitle}>REACT</small>
                         </div>
                         <p className={styles.cardDetails}>Official registration page of Prunater initiative</p>
-                        <p className={styles.cardLinks}>Check Online</p>
+                        <a href="https://www.prunater.com" className={styles.cardLinks}>Check Online</a>
                     </div>
                 </div>
 
@@ -24,7 +24,7 @@ const OtherProjects = () => {
                             <small className={styles.cardSubTitle}>REACT</small>
                         </div>
                         <p className={styles.cardDetails}>Official Website of Scepter global missions</p>
-                        <p className={styles.cardLinks}>Check Online</p>
+                        <a href="https://www.scepterglobalmissions.org" className={styles.cardLinks}>Check Online</a>
                     </div>
                 </div>
                 <div className={styles.otherProjectCard}>
@@ -34,7 +34,7 @@ const OtherProjects = () => {
                             <small className={styles.cardSubTitle}>REACT</small>
                         </div>
                         <p className={styles.cardDetails}>Registration page for TeamHyk's #AllRoundAdventure2021</p>
-                        <p className={styles.cardLinks}>Check Online</p>
+                        <a href="https://teamhyk.netlify.app" className={styles.cardLinks}>Check Online</a>
                     </div>
                 </div>
                 <div className={styles.otherProjectCard}>
