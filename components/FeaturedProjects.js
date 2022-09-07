@@ -12,7 +12,7 @@ const FeaturedProjects = () => {
                         <small className={styles.cardSubTitle}>REACT</small>
                     </div>
                     <p className={styles.cardDetails}>A food ordering app that brings conveniency to customers</p>
-                    <a href="#" className={styles.cardLinks}>Check Online</a>
+                    <a href="https://grachef.netlify.app" className={styles.cardLinks}>Check Online</a>
                 </div>
                 <div className='image-container'>
                     <Image src="/grachef-img.png" width={200} height={200} className={styles.cardImage} alt="Grachef Website" />
