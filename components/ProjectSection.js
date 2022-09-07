@@ -7,7 +7,7 @@ const ProjectSection = () => {
         <div className={styles.projectSection}>
             <FeaturedProjects />
             <OtherProjects />
-            <Talks />
+            {/* <Talks /> */}
         </div>
     )
 }

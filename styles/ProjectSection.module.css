@@ -4,6 +4,7 @@
     scrollbar-width: none; 
     flex-basis: 50%;
     scroll-behavior: smooth;
+    
 }
 /* .projectSection:hover{
     overflow-y: auto;
