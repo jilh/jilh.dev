@@ -38,10 +38,10 @@ const InfoSection = () => {
             <div className={styles.connect}>
                 <b className={styles.subHeading}>CONNECT WITH ME</b>
                 <div className={styles.connectIconWrapper}>
-                    <Link href={'#'} ><a className={styles.link}><IoLogoGithub className={styles.connectIcon} />&nbsp;Github&nbsp;<IoOpenOutline /></a></Link>
-                    <Link href={'#'}><a className={styles.link}><IoLogoLinkedin className={styles.connectIcon} />&nbsp;LinkedIn&nbsp;<IoOpenOutline /></a></Link>
-                    <Link href={'#'}><a className={styles.link}><IoLogoTwitter className={styles.connectIcon} />&nbsp;Twitter&nbsp;<IoOpenOutline /></a></Link>
-                    <Link href={'#'}><a className={styles.link}>Email</a></Link>
+                    <Link href={'https://github.com/jilh'}><a className={styles.link}><IoLogoGithub className={styles.connectIcon} />&nbsp;Github&nbsp;<IoOpenOutline /></a></Link>
+                    <Link href={'https://linkedin.com/in/jilh'}><a className={styles.link}><IoLogoLinkedin className={styles.connectIcon} />&nbsp;LinkedIn&nbsp;<IoOpenOutline /></a></Link>
+                    <Link href={'https://twitter.com/isayjilh'}><a className={styles.link}><IoLogoTwitter className={styles.connectIcon} />&nbsp;Twitter&nbsp;<IoOpenOutline /></a></Link>
+                    <Link href={'mailto:afolayan4life@gmail.com'}><a className={styles.link}>Email</a></Link>
                 </div>
             </div>
         </div>

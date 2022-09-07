@@ -12,7 +12,7 @@ const Navbar = () => {
                 <Link href="#home"><a>Home</a></Link>
                 <Link href="#projects"><a>Projects</a></Link>
                 <Link href="#talks"><a>Talks</a></Link>
-                <Link href="#"><a>Resume</a></Link>
+                <Link href="/ResumeAfolayanStephenOluwayomi.pdf"><a>Resume</a></Link>
             </div>
             <IoMenuOutline size={40} />
             </div>

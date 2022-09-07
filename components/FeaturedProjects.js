@@ -12,24 +12,24 @@ const FeaturedProjects = () => {
                         <small className={styles.cardSubTitle}>REACT</small>
                     </div>
                     <p className={styles.cardDetails}>A food ordering app that brings conveniency to customers</p>
-                    <p className={styles.cardLinks}>Check Online</p>
+                    <a href="#" className={styles.cardLinks}>Check Online</a>
                 </div>
                 <div className='image-container'>
-                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} alt="Grachef Website" />
+                    <Image src="/grachef-img.png" width={200} height={200} className={styles.cardImage} alt="Grachef Website" />
                 </div>
             </div>
 
             <div className={styles.featuredProjectCard}>
                 <div className={styles.cardInfo}>
                     <div className={styles.cardTitleGroup}>
-                        <b className={styles.cardTitle}>Grachef Restaurant</b>
+                        <b className={styles.cardTitle}>Testing Budget</b>
                         <small className={styles.cardSubTitle}>REACT</small>
                     </div>
-                    <p className={styles.cardDetails}>A food ordering app that brings conveniency to customers</p>
-                    <p className={styles.cardLinks}>Check Online</p>
+                    <p className={styles.cardDetails}>A simple budget demo app to learn software testing</p>
+                    <a href="https://jilhbudget.netlify.app" className={styles.cardLinks}>Check Online</a>
                 </div>
                 <div className='image-container'>
-                    <Image src="/project-image.png" width={200} height={200} className={styles.cardImage} alt="Grachef Website" />
+                    <Image src="/budget-img.png" width={200} height={200} className={styles.cardImage} alt="Testing Budget" />
                 </div>
             </div>
         </div>
