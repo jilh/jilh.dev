@@ -33,7 +33,7 @@ const OtherProjects = () => {
                             <b className={styles.cardTitle}>TeamHyk Event Registration</b>
                             <small className={styles.cardSubTitle}>REACT</small>
                         </div>
-                        <p className={styles.cardDetails}>Registration page for TeamHyk's #AllRoundAdventure2021</p>
+                        <p className={styles.cardDetails}>Registration page for TeamHyk&lsquo;s #AllRoundAdventure2021</p>
                         <a href="https://teamhyk.netlify.app" className={styles.cardLinks}>Check Online</a>
                     </div>
                 </div>
