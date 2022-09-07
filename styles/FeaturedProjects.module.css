@@ -15,9 +15,15 @@
     background-color: #1b1b1d;
     padding: 1.5rem;
     margin-bottom: 10px;
+    /* transition: background-color .2s; */
 }
 .featuredProjectCard:hover .cardImage{
     opacity: 1;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+.featuredProjectCard:hover{
+    background-color: #1b1b1d;
 }
 .cardInfo{
     display: flex;
@@ -57,5 +63,7 @@
     object-fit: contain;
     width: 100% !important;
     height: unset !important;
-    opacity: 0.1;
+    opacity: 0.09;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
