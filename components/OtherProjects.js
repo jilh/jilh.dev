@@ -37,7 +37,7 @@ const OtherProjects = () => {
                         <a href="https://teamhyk.netlify.app" className={styles.cardLinks}>Check Online</a>
                     </div>
                 </div>
-                <div className={styles.otherProjectCard}>
+                {/* <div className={styles.otherProjectCard}>
                     <div className={styles.cardInfo}>
                         <div className={styles.cardTitleGroup}>
                             <b className={styles.cardTitle}>Grachef Restaurant</b>
@@ -46,7 +46,7 @@ const OtherProjects = () => {
                         <p className={styles.cardDetails}>A food ordering app that brings conveniency to customers</p>
                         <p className={styles.cardLinks}>Check Online</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
