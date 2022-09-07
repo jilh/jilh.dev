@@ -23,9 +23,12 @@
     padding: 40px 40px;
     margin-bottom: 10px;
     flex-basis: 48%;
+    -webkit-filter:brightness(80%);
+    filter: brightness(80%);
 }
-.otherProjectCard:hover .cardTitle{
-    background-color: green;
+.otherProjectCard:hover{
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 .cardInfo{
     display: flex;
