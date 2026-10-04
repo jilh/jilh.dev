@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# jilh.dev
 
-## Getting Started
+Static Next.js site (black and white), built to deploy on Netlify.
 
-First, run the development server:
+## What's special about it
+
+A **lens switch** in the top bar toggles between **Advocate** and **Builder**.
+It changes the headline, the stats, the order of the proof sections, and which resumes are offered.
+
+Send a recruiter a link that opens in the right lens:
+
+- `https://YOUR-SITE/?lens=advocate`
+- `https://YOUR-SITE/?lens=builder`
+
+## 1. Add your files
+
+**Resumes** (PDF, exact names, in `public/resumes/`):
+
+- `Stephen_Afolayan_DevRel_Resume.pdf`
+- `Stephen_Afolayan_Community_Program_Resume.pdf`
+- `Stephen_Afolayan_React_Native_Resume.pdf`
+
+Do not add the academic CV here.
+
+**App screenshots** (PNG or JPG, in `public/images/`), named to match `content/data.js`:
+
+- `rc-hymns.png`, `anony-ng.png`, `akosori.png`, `vendorl.png`
+
+Wide 16:10 shots work best. Until a file exists, the card shows a clean placeholder.
+If you use `.jpg`, change the extension in `content/data.js`.
+
+**Event and stage photos** go in `public/images/moments/`. The seed list in `content/data.js`
+(`moments`) already names the files it expects, for example `tedx-tau.jpg` and `binapti-conf.jpg`.
+A photo appears on the site only once its file exists, and the whole "Moments" section stays hidden
+until you add the first one. For each photo, fill in `when`, `place` and `note` so the lightbox
+tells the story. Add more by copying a line and changing `src`, `title` and `tags`.
+
+## 2. Edit the words
+
+Everything on the page lives in `content/data.js`. Change numbers, titles and text there.
+When Vendorl launches, set `soon: false`, update `metric`, and point its link to the Play Store.
+
+### Growing the site
+
+- **More apps:** add an entry to `apps` in `content/data.js`. Four fit on screen; a fifth turns the row
+  into a swipeable carousel with arrow buttons (arrows appear only when needed).
+- **More talks:** add entries to `talks.videos` (YouTube `id`, optional `start` in seconds).
+  The one with `featured: true` plays first. With two or more, a scrollable "More talks" row appears
+  and clicking a card swaps the featured player.
+- **Photos:** see "Event and stage photos" above. Filter chips (All, On stage, Hosting, Community)
+  build themselves from the `tags` you use.
+- **Theme:** visitors can flip light and dark with the sun/moon button. The choice is remembered, and
+  the default is dark. Sections alternate light and dark against each other in both themes.
+
+## 3. Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 4. Deploy on Netlify
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Option A, from GitHub: push this folder to a repo, then in Netlify choose
+**Add new site > Import an existing project**. Build settings are already in `netlify.toml`
+(command `npm run build`, publish folder `out`).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Option B, drag and drop: run `npm run build`, then drag the generated `out` folder into Netlify.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Notes
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Fonts (Inter, Space Grotesk, JetBrains Mono, Instrument Serif) load from Google Fonts.
+- Resume links download as files (see the header rule in `netlify.toml`).
+- There is no social preview image yet. Add one at `public/og.png` and reference it in `app/layout.jsx`.
+- Add a "Writing" section when you have your first posts. It is deliberately not on the page yet.
