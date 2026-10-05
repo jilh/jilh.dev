@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Reveal, Head, FadeImg } from './bits';
 import Scroller from './Scroller';
+import { Arrow, PlayIcon, CloseIcon } from './ui';
 import { person, talks } from '../content/data';
 
 const pad = (n) => String(n).padStart(2, '0');
@@ -29,7 +30,9 @@ function Player({ video }) {
       ) : (
         <button className="play" onClick={() => setOn(true)} aria-label={`Play: ${video.title}`}>
           <FadeImg className="poster" src={thumb(video)} alt="" />
-          <span className="play-ico">▶</span>
+          <span className="play-ico">
+            <PlayIcon />
+          </span>
           <span className="play-txt">{video.start ? `Play from ${fmt(video.start)}` : 'Play'}</span>
         </button>
       )}
@@ -37,39 +40,32 @@ function Player({ video }) {
   );
 }
 
-export function Talks({ tone }) {
+export function Talks() {
   const videos = talks.videos;
   const first = Math.max(0, videos.findIndex((v) => v.featured));
   const [i, setI] = useState(first);
   const v = videos[i];
 
   return (
-    <section id="talks" className={`sec ${tone}`}>
+    <section id="talks" className="sec">
       <div className="wrap">
-        <Head kicker="Talks" title="On stage," em="and on the record." />
+        <Head kicker={talks.kicker} title={talks.title} em={talks.em} />
         <div className="talks">
           <Reveal>
-            {/* key resets the player when you pick another talk */}
+            {/* key resets the player when another talk is picked */}
             <Player key={v.id + v.start} video={v} />
           </Reveal>
           <Reveal delay={100} className="talks-text">
-            <p className="meta">
+            <p className="kicker">
               {v.event}
               {v.when ? ` · ${v.when}` : ''}
             </p>
             <h3 className="talk-title">“{v.title}”</h3>
-            {v.note && <p className="talk-note">{v.note}</p>}
-            <a className="link" href={watch(v)} target="_blank" rel="noreferrer">
-              Watch on YouTube ↗
+            {v.note && <p className="mut">{v.note}</p>}
+            <a className="textlink" href={watch(v)} target="_blank" rel="noreferrer">
+              Watch on YouTube <Arrow dir="ne" />
             </a>
-            <p className="meta" style={{ marginTop: 32 }}>
-              Also on stage at
-            </p>
-            <ul className="stages">
-              {talks.stages.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
-            </ul>
+            <p className="mut also">{talks.also}</p>
             <a className="btn ghost" href={`mailto:${person.email}?subject=Speaking%20invitation`}>
               Invite me to speak
             </a>
@@ -78,7 +74,7 @@ export function Talks({ tone }) {
 
         {videos.length > 1 && (
           <div className="more-talks">
-            <p className="meta">More talks</p>
+            <p className="kicker">More talks</p>
             <Scroller label="talks">
               {videos.map((t, idx) => (
                 <button
@@ -89,7 +85,9 @@ export function Talks({ tone }) {
                 >
                   <span className="vthumb">
                     <FadeImg src={thumb(t)} alt="" loading="lazy" />
-                    <span className="vplay">▶</span>
+                    <span className="vplay">
+                      <PlayIcon />
+                    </span>
                   </span>
                   <span className="vmeta">
                     {t.event}
@@ -129,16 +127,16 @@ function Lightbox({ items, index, onClose, onNav }) {
       <figure className="lb-in" onClick={(e) => e.stopPropagation()}>
         <img src={m.src} alt={m.alt || m.title} />
         <figcaption className="lb-cap">
-          {line && <p className="meta">{line}</p>}
+          {line && <p className="lb-meta">{line}</p>}
           <h3>{m.title}</h3>
           {m.note && <p>{m.note}</p>}
-          <p className="meta">
+          <p className="lb-meta">
             {index + 1} / {items.length}
           </p>
         </figcaption>
       </figure>
       <button className="lb-btn lb-x" onClick={onClose} aria-label="Close photo" autoFocus>
-        ✕
+        <CloseIcon />
       </button>
       {items.length > 1 && (
         <>
@@ -150,7 +148,7 @@ function Lightbox({ items, index, onClose, onNav }) {
             }}
             aria-label="Previous photo"
           >
-            ←
+            <Arrow dir="left" />
           </button>
           <button
             className="lb-btn lb-next"
@@ -160,7 +158,7 @@ function Lightbox({ items, index, onClose, onNav }) {
             }}
             aria-label="Next photo"
           >
-            →
+            <Arrow dir="right" />
           </button>
         </>
       )}
@@ -168,7 +166,7 @@ function Lightbox({ items, index, onClose, onNav }) {
   );
 }
 
-export function Moments({ tone, items }) {
+export function Moments({ items }) {
   const tags = ['All', ...Array.from(new Set(items.flatMap((m) => m.tags || [])))];
   const [tag, setTag] = useState('All');
   const [open, setOpen] = useState(null);
@@ -181,14 +179,9 @@ export function Moments({ tone, items }) {
   );
 
   return (
-    <section id="moments" className={`sec ${tone}`}>
+    <section id="moments" className="sec">
       <div className="wrap">
-        <Head
-          kicker="Moments"
-          title="The rooms I have"
-          em="stood in."
-          sub="Stages, conferences, and meetups. Tap any photo for the story behind it."
-        />
+        <Head kicker="Moments" title="The rooms I have" em="stood in." sub="Tap any photo for the story behind it." />
         {tags.length > 2 && (
           <div className="filters" role="group" aria-label="Filter photos">
             {tags.map((t) => (

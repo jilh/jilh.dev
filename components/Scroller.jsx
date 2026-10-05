@@ -1,9 +1,10 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { Arrow } from './ui';
 
 // A horizontal, snap-scrolling row. Arrow buttons only appear when the content overflows,
-// so one or two items sit still and five or more become a carousel.
+// so a few items sit still and many become a carousel.
 export default function Scroller({ children, label, className = '' }) {
   const ref = useRef(null);
   const [st, setSt] = useState({ overflow: false, prev: false, next: false });
@@ -41,10 +42,10 @@ export default function Scroller({ children, label, className = '' }) {
       {st.overflow && (
         <div className="scroll-ctl">
           <button onClick={() => by(-1)} disabled={!st.prev} aria-label={`Scroll ${label} left`}>
-            ←
+            <Arrow dir="left" />
           </button>
           <button onClick={() => by(1)} disabled={!st.next} aria-label={`Scroll ${label} right`}>
-            →
+            <Arrow dir="right" />
           </button>
         </div>
       )}

@@ -1,75 +1,30 @@
-# jilh.dev
+# jilh portfolio (v3)
 
-Static Next.js site (black and white), built to deploy on Netlify.
+Two sites in one, pure black or pure white, Next.js static export for Netlify.
 
-## What's special about it
+- `/` is the **Advocate** view (communities, talks, photos). Offers the DevRel and Community & Program resumes.
+- `/builder/` is the **Builder** view (apps, craft). Offers the React Native resume.
+- Each page links only its own resumes, plus a "see the other side" section and a hint under the hero buttons.
 
-A **lens switch** in the top bar toggles between **Advocate** and **Builder**.
-It changes the headline, the stats, the order of the proof sections, and which resumes are offered.
+## Files you supply (put them in `public/`)
+- `logo-black.png` (shown in light theme) and `logo-white.png` (shown in dark theme). If missing, the text "jilh" shows.
+- `resumes/Stephen_Afolayan_DevRel_Resume.pdf`, `resumes/Stephen_Afolayan_Community_Program_Resume.pdf`, `resumes/Stephen_Afolayan_React_Native_Resume.pdf`
+- `images/rc-hymns.png`, `anony-ng.png`, `akosori.png`, `vendorl.png` (phone screenshots, about 540x1140)
+- `images/moments/*.jpg`: event photos named in `content/data.js` (`moments`). A photo shows only once its file exists.
 
-Send a recruiter a link that opens in the right lens:
+## Edit content
+All copy is in `content/data.js`. Add an app to `builder.apps.items` and a talk to `talks.videos`; the pickers and scrollers grow on their own.
 
-- `https://YOUR-SITE/?lens=advocate`
-- `https://YOUR-SITE/?lens=builder`
+## Tool icons
+Edit the `WANTED` list in `scripts/build-icons.mjs`, run `npm run icons`, then reference the key in `content/data.js`.
 
-## 1. Add your files
+## Fonts
+Instrument Serif (headlines) and Inter (everything else). Nothing else is loaded.
 
-**Resumes** (PDF, exact names, in `public/resumes/`):
-
-- `Stephen_Afolayan_DevRel_Resume.pdf`
-- `Stephen_Afolayan_Community_Program_Resume.pdf`
-- `Stephen_Afolayan_React_Native_Resume.pdf`
-
-Do not add the academic CV here.
-
-**App screenshots** (PNG or JPG, in `public/images/`), named to match `content/data.js`:
-
-- `rc-hymns.png`, `anony-ng.png`, `akosori.png`, `vendorl.png`
-
-Wide 16:10 shots work best. Until a file exists, the card shows a clean placeholder.
-If you use `.jpg`, change the extension in `content/data.js`.
-
-**Event and stage photos** go in `public/images/moments/`. The seed list in `content/data.js`
-(`moments`) already names the files it expects, for example `tedx-tau.jpg` and `binapti-conf.jpg`.
-A photo appears on the site only once its file exists, and the whole "Moments" section stays hidden
-until you add the first one. For each photo, fill in `when`, `place` and `note` so the lightbox
-tells the story. Add more by copying a line and changing `src`, `title` and `tags`.
-
-## 2. Edit the words
-
-Everything on the page lives in `content/data.js`. Change numbers, titles and text there.
-When Vendorl launches, set `soon: false`, update `metric`, and point its link to the Play Store.
-
-### Growing the site
-
-- **More apps:** add an entry to `apps` in `content/data.js`. Four fit on screen; a fifth turns the row
-  into a swipeable carousel with arrow buttons (arrows appear only when needed).
-- **More talks:** add entries to `talks.videos` (YouTube `id`, optional `start` in seconds).
-  The one with `featured: true` plays first. With two or more, a scrollable "More talks" row appears
-  and clicking a card swaps the featured player.
-- **Photos:** see "Event and stage photos" above. Filter chips (All, On stage, Hosting, Community)
-  build themselves from the `tags` you use.
-- **Theme:** visitors can flip light and dark with the sun/moon button. The choice is remembered, and
-  the default is dark. Sections alternate light and dark against each other in both themes.
-
-## 3. Run it locally
-
-```bash
-npm install
-npm run dev
+## Run and deploy
 ```
-
-## 4. Deploy on Netlify
-
-Option A, from GitHub: push this folder to a repo, then in Netlify choose
-**Add new site > Import an existing project**. Build settings are already in `netlify.toml`
-(command `npm run build`, publish folder `out`).
-
-Option B, drag and drop: run `npm run build`, then drag the generated `out` folder into Netlify.
-
-## Notes
-
-- Fonts (Inter, Space Grotesk, JetBrains Mono, Instrument Serif) load from Google Fonts.
-- Resume links download as files (see the header rule in `netlify.toml`).
-- There is no social preview image yet. Add one at `public/og.png` and reference it in `app/layout.jsx`.
-- Add a "Writing" section when you have your first posts. It is deliberately not on the page yet.
+npm install
+npm run dev      # local
+npm run build    # outputs ./out
+```
+Netlify reads `netlify.toml` (build `npm run build`, publish `out`). Old `?lens=` links are no longer used.

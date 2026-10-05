@@ -1,38 +1,42 @@
+import '@fontsource-variable/inter';
+import '@fontsource/instrument-serif/400.css';
+import '@fontsource/instrument-serif/400-italic.css';
 import './globals.css';
+import Nav from '../components/Nav';
+import { person, values } from '../content/data';
 
 export const metadata = {
-  title: 'Stephen Afolayan | Developer Advocate, Community & Program Manager, React Native Engineer',
-  description:
-    'I build developer communities from zero and ship the apps to prove the tools work. Developer advocate, community and program manager, and React Native engineer. TEDx speaker.',
-  openGraph: {
-    title: 'Stephen Afolayan (jilh)',
-    description: 'I build developer communities from zero and ship the apps to prove the tools work.',
-    type: 'website',
-  },
+  title: 'Stephen Afolayan',
+  description: 'Developer advocate, community and program manager, and React Native engineer.',
 };
 
 export const viewport = { themeColor: '#000000' };
 
+// Runs before the page paints, so the chosen theme never flashes. Dark is the default.
+const themeScript = `try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='light'?'light':'dark'}catch(e){}`;
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='light'?'light':'dark'}catch(e){}`,
-          }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap"
-        />
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <noscript>
           <style>{`.reveal{opacity:1!important;transform:none!important}`}</style>
         </noscript>
       </head>
-      <body>{children}</body>
+      <body>
+        <a className="skip" href="#main">
+          Skip to content
+        </a>
+        <Nav />
+        <main id="main">{children}</main>
+        <footer className="foot">
+          <div className="wrap foot-in">
+            <span>© 2026 {person.name}</span>
+            <span className="foot-line">{values.line}</span>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
